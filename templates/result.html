@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <h2>Prediction Result</h2>
+        <h3>Your Prediction:</h3>
+        {% if prediction == 1 %}
+            <p class="result danger"><strong>Risk of Heart Disease: Yes</strong></p>
+        {% else %}
+            <p class="result safe"><strong>Risk of Heart Disease: No</strong></p>
+        {% endif %}
+        <a href="/" class="btn">Go Back</a>
+    </div>
+</body>
+</html>
